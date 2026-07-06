@@ -10,7 +10,7 @@ jobs:
     name: Security Audit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -29,7 +29,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/dependency-review-action@v4
         with:
           allow-licenses: GPL-3.0, MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, Unlicense
@@ -39,7 +39,7 @@ jobs:
     name: Benchmark
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -52,7 +52,7 @@ jobs:
     name: Package Health
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: 20
