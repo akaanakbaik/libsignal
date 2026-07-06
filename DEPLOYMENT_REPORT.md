@@ -11,7 +11,7 @@
 | **Visibility** | Public |
 | **Default Branch** | `master` |
 | **Latest Commit** | `134e059` |
-| **Release Tag** | `v6.0.1` |
+| **Release Tag** | `v1.0.0` |
 
 ---
 
@@ -27,7 +27,7 @@
 | 6 | Commit (4 commits total) | ✅ Selesai |
 | 7 | Push to GitHub (master branch) | ✅ Selesai |
 | 8 | GitHub Actions monitoring | ✅ CI 🟢 SUCCESS |
-| 9 | Release v6.0.1 | ✅ Selesai |
+| 9 | Release v1.0.0 | ✅ Selesai |
 
 ---
 
@@ -55,9 +55,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Tag** | `v6.0.1` |
+| **Tag** | `v1.0.0` |
 | **Title** | Initial Production Release |
-| **URL** | [https://github.com/akaanakbaik/libsignal/releases/tag/v6.0.1](https://github.com/akaanakbaik/libsignal/releases/tag/v6.0.1) |
+| **URL** | [https://github.com/akaanakbaik/libsignal/releases/tag/v1.0.0](https://github.com/akaanakbaik/libsignal/releases/tag/v1.0.0) |
 | **Type** | GitHub Release (draft: false, prerelease: false) |
 
 ---
@@ -133,7 +133,7 @@
 | 12 | Tidak ada file temporary | ✅ |
 | 13 | Commit history bersih | ✅ (4 commits) |
 | 14 | Branch utama benar (master) | ✅ |
-| 15 | Release v6.0.1 tersedia | ✅ |
+| 15 | Release v1.0.0 tersedia | ✅ |
 | 16 | Repository siap dipakai publik | ✅ |
 
 ---

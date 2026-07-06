@@ -7,7 +7,7 @@
 | Metadata | |
 |----------|-|
 | **Test Date** | 6 Juli 2026 |
-| **libsignal Version** | 6.0.1 (fork) |
+| **libsignal Version** | 1.0.0 (fork) |
 | **baileys Version** | 1.0.5-rc.2 |
 | **Test Type** | Runtime Integration Test (50 tests) |
 | **Test Runner** | Node.js native (custom script) |
@@ -30,15 +30,15 @@
 ```
 integration-test@1.0.0 /tmp/integration-test
 ├── @kelvdra/baileys@1.0.5-rc.2
-│   ├── @akaanakbaik/libsignal@6.0.1  ← FORK (local .tgz)
+│   ├── @akaanakbaik/libsignal@1.0.0  ← FORK (local .tgz)
 │   │   ├── curve25519-js@^0.0.4
 │   │   └── protobufjs@^7.5.5
 │   └── ... (71 additional dependencies)
-└── @akaanakbaik/libsignal@6.0.1 (deduped)
+└── @akaanakbaik/libsignal@1.0.0 (deduped)
 ```
 
 ### Installation Method
-- libsignal fork: `npm install ./kelvdra-libsignal-6.0.1.tgz`
+- libsignal fork: `npm install ./kelvdra-libsignal-1.0.0.tgz`
 - Baileys: `npm install @kelvdra/baileys@latest`
 - Baileys secara otomatis menggunakan `@akaanakbaik/libsignal` yang sudah diinstall (NPM dedupes ke root level)
 
@@ -386,7 +386,7 @@ Yang **SUDAH** diverifikasi:
 INTEGRATION TEST: @akaanakbaik/libsignal × @kelvdra/baileys
 Node.js: v22.22.3
 Platform: linux x64
-📦 @akaanakbaik/libsignal: 6.0.1
+📦 @akaanakbaik/libsignal: 1.0.0
 📦 @kelvdra/baileys: 1.0.5-rc.2
 📦 libsignal path: /tmp/.../node_modules/@akaanakbaik/libsignal/index.js
 
@@ -426,7 +426,7 @@ Encrypted: type=3, body=785 bytes, regId=12345
 ```
 ┌──────────────────────────────────────────────┐
 │                                              │
-│   @akaanakbaik/libsignal v6.0.1                 │
+│   @akaanakbaik/libsignal v1.0.0                 │
 │                                              │
 │   Integration Test Result:                   │
 │   ─────────────────────────                  │
@@ -451,7 +451,7 @@ Encrypted: type=3, body=785 bytes, regId=12345
 
 1. **Fork siap digunakan sebagai dependency @kelvdra/baileys** — semua API compat, tidak ada regression
 2. **Disarankan melakukan real WhatsApp pairing test** sebelum production deployment untuk memvalidasi end-to-end flow
-3. **Untuk maintainer @kelvdra/baileys**: lakukan update dependency dari `libsignal` → `@akaanakbaik/libsignal@6.0.1` tanpa perlu kode perubahan lain
+3. **Untuk maintainer @kelvdra/baileys**: lakukan update dependency dari `libsignal` → `@akaanakbaik/libsignal@1.0.0` tanpa perlu kode perubahan lain
 
 ---
 

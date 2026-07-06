@@ -28,7 +28,7 @@ What actually happened. Include error messages, stack traces, or unexpected outp
 
 ## Environment
 - Node.js version: [e.g. 20.11.0]
-- Package version: [e.g. 6.0.1]
+- Package version: [e.g. 1.0.0]
 - OS: [e.g. Ubuntu 24.04, macOS 14, Windows 11]
 - Baileys version (if applicable): [e.g. 6.7.0]
 

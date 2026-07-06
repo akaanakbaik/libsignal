@@ -1,6 +1,6 @@
 {
   "name": "@akaanakbaik/libsignal",
-  "version": "6.0.1",
+  "version": "1.0.0",
   "description": "Modernized fork of WhiskeySockets/libsignal-node for @kelvdra/baileys — zero-breaking-change audit and maintenance update",
   "homepage": "https://github.com/akaanakbaik/libsignal#readme",
   "repository": {
@@ -43,7 +43,6 @@
     "test:coverage": "node --experimental-test-coverage --test test/*.test.js"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   }
 }

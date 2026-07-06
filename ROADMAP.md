@@ -1,6 +1,6 @@
 # Roadmap
 
-## Current Status: v6.0.1
+## Current Status: v1.0.0
 
 This is a modernized fork of WhiskeySockets/libsignal-node, focused on security, maintainability, and production readiness.
 

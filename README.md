@@ -2,6 +2,8 @@
 
 **Modernized, security-hardened fork of the Signal Protocol for Node.js**
 
+[![npm version](https://img.shields.io/npm/v/@akaanakbaik/libsignal.svg?style=flat-square)](https://www.npmjs.com/package/@akaanakbaik/libsignal)
+[![npm downloads](https://img.shields.io/npm/dm/@akaanakbaik/libsignal.svg?style=flat-square)](https://www.npmjs.com/package/@akaanakbaik/libsignal)
 [![GitHub last commit](https://img.shields.io/github/last-commit/akaanakbaik/libsignal?style=flat-square)](https://github.com/akaanakbaik/libsignal/commits/master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](LICENSE)
 [![Node.js CI](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square)](https://github.com/akaanakbaik/libsignal/actions?query=workflow%3ACI)
@@ -162,7 +164,7 @@ For full API documentation, see [API_REFERENCE.md](API_REFERENCE.md).
 ```json
 {
   "dependencies": {
-    "libsignal": "npm:@akaanakbaik/libsignal@^6.0.1"
+    "libsignal": "npm:@akaanakbaik/libsignal@^1.0.0"
   }
 }
 ```
@@ -171,7 +173,7 @@ For full API documentation, see [API_REFERENCE.md](API_REFERENCE.md).
 ```json
 {
   "dependencies": {
-    "@akaanakbaik/libsignal": "^6.0.1"
+    "@akaanakbaik/libsignal": "^1.0.0"
   }
 }
 ```

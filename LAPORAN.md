@@ -7,7 +7,7 @@
 | Metadata | |
 |----------|-|
 | **Tanggal** | 6 Juli 2026 |
-| **Versi** | 6.0.1 |
+| **Versi** | 1.0.0 |
 | **Repository** | [@akaanakbaik/libsignal](https://github.com/akaanakbaik/libsignal) |
 | **Fork dari** | [WhiskeySockets/libsignal-node](https://github.com/WhiskeySockets/libsignal-node) v6.0.0 |
 | **Target** | Dependency resmi untuk [@kelvdra/baileys](https://github.com/kelvdra/baileys) |
@@ -42,7 +42,7 @@
 
 ### Status: ✅ **PRODUCTION READY**
 
-`@akaanakbaik/libsignal` v6.0.1 telah melalui audit menyeluruh dan siap digunakan sebagai pengganti `WhiskeySockets/libsignal-node` v6.0.0.
+`@akaanakbaik/libsignal` v1.0.0 telah melalui audit menyeluruh dan siap digunakan sebagai pengganti `WhiskeySockets/libsignal-node` v6.0.0.
 
 ### Key Metrics
 
@@ -596,7 +596,7 @@ console.error("WARNING: Expected pubkey of length 33...");
 | Field | Status | Value |
 |-------|--------|-------|
 | name | ✅ | `@akaanakbaik/libsignal` |
-| version | ✅ | `6.0.1` |
+| version | ✅ | `1.0.0` |
 | description | ✅ | Modernized fork... |
 | main | ✅ | `index.js` |
 | types | ✅ | `index.d.ts` |
@@ -726,7 +726,7 @@ Repository ini memiliki risiko residu yang sangat rendah karena:
 
 ## 15. Recommendations
 
-### Immediate (v6.0.1)
+### Immediate (v1.0.0)
 - ✅ Lakukan npm publish
 - ✅ Update @kelvdra/baileys dependency
 - ✅ Verify integration in staging environment
