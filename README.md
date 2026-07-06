@@ -2,7 +2,7 @@
 
 **Modernized, security-hardened fork of the Signal Protocol for Node.js**
 
-[![GitHub Release](https://img.shields.io/github/v/release/akaanakbaik/libsignal?style=flat-square)](https://github.com/akaanakbaik/libsignal/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/akaanakbaik/libsignal?style=flat-square)](https://github.com/akaanakbaik/libsignal/commits/master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](LICENSE)
 [![Node.js CI](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square)](https://github.com/akaanakbaik/libsignal/actions?query=workflow%3ACI)
 [![CodeQL](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square&label=CodeQL)](https://github.com/akaanakbaik/libsignal/security/code-scanning)
