@@ -1,9 +1,12 @@
 node_modules
+package-lock.json
 *.swp
 npm-debug.log
 .DS_Store
 .env
 *.tgz
+*.so
+*.log
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -11,3 +14,8 @@ npm-debug.log
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+node-compile-cache/
+bun-node-*/
+
+# Test artifacts (from integration testing)
+/tmp/integration-test/

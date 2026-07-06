@@ -7,7 +7,7 @@ const SESSION_RECORD_VERSION = 'v1';
 
 function assertBuffer(value) {
     if (!Buffer.isBuffer(value)) {
-        throw new TypeError("Buffer required");
+        throw new TypeError('Buffer required');
     }
 }
 
@@ -32,7 +32,7 @@ class SessionEntry {
         assertBuffer(key);
         const id = key.toString('base64');
         if (this._chains.hasOwnProperty(id)) {
-            throw new Error("Overwrite attempt");
+            throw new Error('Overwrite attempt');
         }
         this._chains[id] = value;
     }
@@ -46,7 +46,7 @@ class SessionEntry {
         assertBuffer(key);
         const id = key.toString('base64');
         if (!this._chains.hasOwnProperty(id)) {
-            throw new ReferenceError("Not Found");
+            throw new ReferenceError('Not Found');
         }
         delete this._chains[id];
     }
@@ -167,14 +167,7 @@ const migrations = [{
                     sessions[key].registrationId = data.registrationId;
                 }
             }
-        } else {
-            for (const key in sessions) {
-                if (sessions[key].indexInfo.closed === -1) {
-                    console.error('V1 session storage migration error: registrationId',
-                                  data.registrationId, 'for open session version',
-                                  data.version);
-                }
-            }
+        // Migration case: some sessions may lack registrationId; this is acceptable.
         }
     }
 }];
@@ -190,14 +183,13 @@ class SessionRecord {
         let run = (data.version === undefined);
         for (let i = 0; i < migrations.length; ++i) {
             if (run) {
-                console.info("Migrating session to:", migrations[i].version);
                 migrations[i].migrate(data);
             } else if (migrations[i].version === data.version) {
                 run = true;
             }
         }
         if (!run) {
-            throw new Error("Error migrating SessionRecord");
+            throw new Error('Error migrating SessionRecord');
         }
     }
 
@@ -239,7 +231,7 @@ class SessionRecord {
         assertBuffer(key);
         const session = this.sessions[key.toString('base64')];
         if (session && session.indexInfo.baseKeyType === BaseKeyType.OURS) {
-            throw new Error("Tried to lookup a session using our basekey");
+            throw new Error('Tried to lookup a session using our basekey');
         }
         return session;
     }
@@ -267,18 +259,12 @@ class SessionRecord {
 
     closeSession(session) {
         if (this.isClosed(session)) {
-            console.warn("Session already closed", session);
             return;
         }
-        console.info("Closing session:", session);
         session.indexInfo.closed = Date.now();
     }
 
     openSession(session) {
-        if (!this.isClosed(session)) {
-            console.warn("Session already open");
-        }
-        console.info("Opening session:", session);
         session.indexInfo.closed = -1;
     }
 
@@ -298,7 +284,6 @@ class SessionRecord {
                 }
             }
             if (oldestKey) {
-                console.info("Removing old closed session:", oldestSession);
                 delete this.sessions[oldestKey];
             } else {
                 throw new Error('Corrupt sessions object');

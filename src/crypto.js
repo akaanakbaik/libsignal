@@ -56,7 +56,7 @@ function deriveSecrets(input, salt, info, chunks) {
     assertBuffer(salt);
     assertBuffer(info);
     if (salt.byteLength != 32) {
-        throw new Error("Got salt of incorrect length");
+        throw new Error('Got salt of incorrect length');
     }
     chunks = chunks || 3;
     assert(chunks >= 1 && chunks <= 3);
@@ -81,10 +81,10 @@ function deriveSecrets(input, salt, info, chunks) {
 function verifyMAC(data, key, mac, length) {
     const calculatedMac = calculateMAC(key, data).slice(0, length);
     if (mac.length !== length || calculatedMac.length !== length) {
-        throw new Error("Bad MAC length");
+        throw new Error('Bad MAC length');
     }
     if (!mac.equals(calculatedMac)) {
-        throw new Error("Bad MAC");
+        throw new Error('Bad MAC');
     }
 }
 

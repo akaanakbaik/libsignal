@@ -1,5 +1,5 @@
 // vim: ts=4:sw=4:expandtab
- 
+
  /*
   * jobQueue manages multiple queues indexed by device to serialize
   * session io ops on the database.
@@ -13,7 +13,7 @@ const _gcLimit = 10000;
 async function _asyncQueueExecutor(queue, cleanup) {
     let offt = 0;
     while (true) {
-        let limit = Math.min(queue.length, _gcLimit); // Break up thundering hurds for GC duty.
+        const limit = Math.min(queue.length, _gcLimit); // Break up thundering hurds for GC duty.
         for (let i = offt; i < limit; i++) {
             const job = queue[i];
             try {
@@ -42,12 +42,10 @@ module.exports = function(bucket, awaitable) {
      * here have completed (or thrown).  The bucket argument is a hashable
      * key representing the task queue to use. */
     if (!awaitable.name) {
-        // Make debuging easier by adding a name to this function.
+        // Make debugging easier by adding a name to this function.
         Object.defineProperty(awaitable, 'name', {writable: true});
         if (typeof bucket === 'string') {
             awaitable.name = bucket;
-        } else {
-            console.warn("Unhandled bucket type (for naming):", typeof bucket, bucket);
         }
     }
     let inactive;

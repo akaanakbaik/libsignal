@@ -1,0 +1,27 @@
+# Default owners for everything
+* @kelvdra
+
+# Source code
+/src/*.js @kelvdra
+index.js @kelvdra
+index.d.ts @kelvdra
+
+# Configuration files
+package.json @kelvdra
+.eslintrc.json @kelvdra
+.prettierrc @kelvdra
+.editorconfig @kelvdra
+.gitattributes @kelvdra
+
+# Documentation
+README.md @kelvdra
+CONTRIBUTING.md @kelvdra
+CHANGELOG.md @kelvdra
+SECURITY.md @kelvdra
+LAPORAN.md @kelvdra
+
+# GitHub configuration
+.github/ @kelvdra
+
+# Tests
+/test/*.test.js @kelvdra

@@ -10,7 +10,7 @@ function isNonNegativeInteger(n) {
 exports.generateIdentityKeyPair = curve.generateKeyPair;
 
 exports.generateRegistrationId = function() {
-    var registrationId = Uint16Array.from(nodeCrypto.randomBytes(2))[0];
+    const registrationId = Uint16Array.from(nodeCrypto.randomBytes(2))[0];
     return registrationId & 0x3fff;
 };
 

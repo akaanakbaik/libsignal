@@ -43,7 +43,6 @@ class SessionBuilder {
             } else {
                 const openSession = record.getOpenSession();
                 if (openSession) {
-                    // console.warn("Closing stale open session for new outgoing prekey bundle"); temporary fix
                     record.closeSession(openSession);
                 }
             }
@@ -64,14 +63,13 @@ class SessionBuilder {
         const preKeyPair = await this.storage.loadPreKey(message.preKeyId);
         if (message.preKeyId && !preKeyPair) {
             throw new errors.PreKeyError('Invalid PreKey ID');
-        }   
+        }
         const signedPreKeyPair = await this.storage.loadSignedPreKey(message.signedPreKeyId);
-        if (!signedPreKeyPair) { 
-            throw new errors.PreKeyError("Missing SignedPreKey");
-        }   
+        if (!signedPreKeyPair) {
+            throw new errors.PreKeyError('Missing SignedPreKey');
+        }
         const existingOpenSession = record.getOpenSession();
         if (existingOpenSession) {
-            console.warn("Closing open session in favor of incoming prekey bundle");
             record.closeSession(existingOpenSession);
         }
         record.setSession(await this.initSession(false, preKeyPair, signedPreKeyPair,
@@ -84,12 +82,12 @@ class SessionBuilder {
                       theirEphemeralPubKey, theirSignedPubKey, registrationId) {
         if (isInitiator) {
             if (ourSignedKey) {
-                throw new Error("Invalid call to initSession");
+                throw new Error('Invalid call to initSession');
             }
             ourSignedKey = ourEphemeralKey;
         } else {
             if (theirSignedPubKey) {
-                throw new Error("Invalid call to initSession");
+                throw new Error('Invalid call to initSession');
             }
             theirSignedPubKey = theirEphemeralPubKey;
         }
@@ -99,7 +97,7 @@ class SessionBuilder {
         } else {
             sharedSecret = new Uint8Array(32 * 5);
         }
-        for (var i = 0; i < 32; i++) {
+        for (let i = 0; i < 32; i++) {
             sharedSecret[i] = 0xff;
         }
         const ourIdentityKey = await this.storage.getOurIdentity();
@@ -119,7 +117,7 @@ class SessionBuilder {
             sharedSecret.set(new Uint8Array(a4), 32 * 4);
         }
         const masterKey = crypto.deriveSecrets(Buffer.from(sharedSecret), Buffer.alloc(32),
-                                               Buffer.from("WhisperText"));
+                                               Buffer.from('WhisperText'));
         const session = SessionRecord.createEntry();
         session.registrationId = registrationId;
         session.currentRatchet = {
@@ -148,7 +146,7 @@ class SessionBuilder {
     calculateSendingRatchet(session, remoteKey) {
         const ratchet = session.currentRatchet;
         const sharedSecret = curve.calculateAgreement(remoteKey, ratchet.ephemeralKeyPair.privKey);
-        const masterKey = crypto.deriveSecrets(sharedSecret, ratchet.rootKey, Buffer.from("WhisperRatchet"));
+        const masterKey = crypto.deriveSecrets(sharedSecret, ratchet.rootKey, Buffer.from('WhisperRatchet'));
         session.addChain(ratchet.ephemeralKeyPair.pubKey, {
             messageKeys: {},
             chainKey: {

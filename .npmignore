@@ -1,0 +1,17 @@
+.git
+.gitignore
+.github
+.eslintrc.json
+.npmrc
+.yarnrc.yml
+yarn.lock
+yarn-error.log
+*.log
+*.tgz
+node_modules
+test
+protos
+generate-proto.sh
+CODE_OF_CONDUCT.md
+SECURITY.md
+node-compile-cache
