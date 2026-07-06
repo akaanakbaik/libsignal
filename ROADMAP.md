@@ -27,7 +27,7 @@ This is a modernized fork of WhiskeySockets/libsignal-node, focused on security,
 
 - [ ] **Session Encryption**: Optional encryption for stored sessions
 - [ ] **Metrics**: Add optional performance metrics (disabled by default)
-- [ ] **Documentation Site**: Hosted API docs (kelvdra.dev/libsignal)
+- [ ] **Documentation Site**: Hosted API docs (GitHub Pages)
 - [ ] **Examples**: More usage examples in documentation
 - [ ] **Community**: Set up discussion forum, community channels
 

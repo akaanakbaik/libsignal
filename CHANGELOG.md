@@ -63,5 +63,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The original release from [WhiskeySockets/libsignal-node](https://github.com/WhiskeySockets/libsignal-node).
 
-[6.0.1]: https://github.com/kelvdra/libsignal/compare/v6.0.0...v6.0.1
+[6.0.1]: https://github.com/akaanakbaik/libsignal/compare/v6.0.0...v6.0.1
 [6.0.0]: https://github.com/WhiskeySockets/libsignal-node/releases/tag/v6.0.0
