@@ -1,7 +1,7 @@
 'use strict';
 
 // ============================================================================
-// INTEGRATION TEST: @kelvdra/libsignal × @kelvdra/baileys
+// INTEGRATION TEST: @akaanakbaik/libsignal × @kelvdra/baileys
 // ============================================================================
 // Real runtime integration test yang menguji semua API libsignal
 // sebagaimana dipanggil oleh Baileys.
@@ -191,7 +191,7 @@ const systemInfo = {
 };
 
 console.log('\n' + '='.repeat(70));
-console.log('INTEGRATION TEST: @kelvdra/libsignal × @kelvdra/baileys');
+console.log('INTEGRATION TEST: @akaanakbaik/libsignal × @kelvdra/baileys');
 console.log('='.repeat(70));
 console.log(`Node.js: ${systemInfo.nodeVersion}`);
 console.log(`Platform: ${systemInfo.platform} ${systemInfo.arch}`);
@@ -205,11 +205,11 @@ let libsignal;
 let baileysPkg;
 
 try {
-    libsignal = require('@kelvdra/libsignal');
+    libsignal = require('@akaanakbaik/libsignal');
     baileysPkg = require('@kelvdra/baileys/package.json');
-    console.log(`\n📦 @kelvdra/libsignal: ${require('@kelvdra/libsignal/package.json').version}`);
+    console.log(`\n📦 @akaanakbaik/libsignal: ${require('@akaanakbaik/libsignal/package.json').version}`);
     console.log(`📦 @kelvdra/baileys: ${baileysPkg.version}`);
-    console.log(`📦 libsignal path: ${require.resolve('@kelvdra/libsignal')}`);
+    console.log(`📦 libsignal path: ${require.resolve('@akaanakbaik/libsignal')}`);
     console.log(`📦 baileys path: ${require.resolve('@kelvdra/baileys')}`);
     results.runtime.passed++;
 } catch (e) {
@@ -941,9 +941,9 @@ console.log(perfLines.join('\n'));
 const reportData = {
     timestamp: new Date().toISOString(),
     systemInfo,
-    libsignalVersion: require('@kelvdra/libsignal/package.json').version,
+    libsignalVersion: require('@akaanakbaik/libsignal/package.json').version,
     baileysVersion: baileysPkg.version,
-    libsignalPath: require.resolve('@kelvdra/libsignal'),
+    libsignalPath: require.resolve('@akaanakbaik/libsignal'),
     baileysPath: require.resolve('@kelvdra/baileys'),
     results,
     summary: {

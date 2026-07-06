@@ -16,9 +16,9 @@
 ## Exports
 
 ```javascript
-const libsignal = require('@kelvdra/libsignal');
+const libsignal = require('@akaanakbaik/libsignal');
 // or
-import * as libsignal from '@kelvdra/libsignal';
+import * as libsignal from '@akaanakbaik/libsignal';
 ```
 
 | Export | Source | Description |

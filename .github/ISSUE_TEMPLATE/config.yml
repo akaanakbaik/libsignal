@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: Documentation
-    url: https://github.com/kelvdra/libsignal#readme
+    url: https://github.com/akaanakbaik/libsignal#readme
     about: Check the documentation first
   - name: Security Issue
-    url: https://github.com/kelvdra/libsignal/security/policy
+    url: https://github.com/akaanakbaik/libsignal/security/policy
     about: Please report security vulnerabilities here

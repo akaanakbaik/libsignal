@@ -1,14 +1,14 @@
 {
-  "name": "@kelvdra/libsignal",
+  "name": "@akaanakbaik/libsignal",
   "version": "6.0.1",
   "description": "Modernized fork of WhiskeySockets/libsignal-node for @kelvdra/baileys — zero-breaking-change audit and maintenance update",
-  "homepage": "https://github.com/kelvdra/libsignal#readme",
+  "homepage": "https://github.com/akaanakbaik/libsignal#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kelvdra/libsignal.git"
+    "url": "git+https://github.com/akaanakbaik/libsignal.git"
   },
   "bugs": {
-    "url": "https://github.com/kelvdra/libsignal/issues"
+    "url": "https://github.com/akaanakbaik/libsignal/issues"
   },
   "main": "index.js",
   "types": "index.d.ts",

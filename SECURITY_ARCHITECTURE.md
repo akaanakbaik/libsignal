@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the security properties, cryptographic primitives, and threat model of the `@kelvdra/libsignal` package.
+This document describes the security properties, cryptographic primitives, and threat model of the `@akaanakbaik/libsignal` package.
 
 ## Threat Model
 

@@ -1,4 +1,4 @@
-# Contributing to @kelvdra/libsignal
+# Contributing to @akaanakbaik/libsignal
 
 First off, thank you for considering contributing to this project! We welcome contributions from everyone.
 

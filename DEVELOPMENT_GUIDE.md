@@ -9,7 +9,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/kelvdra/libsignal.git
+git clone https://github.com/akaanakbaik/libsignal.git
 cd libsignal
 
 # Install dependencies
@@ -115,7 +115,7 @@ describe('My Feature', () => {
 
 ### Manual Testing with Baileys
 ```javascript
-const libsignal = require('@kelvdra/libsignal');
+const libsignal = require('@akaanakbaik/libsignal');
 // Use the same API as you would with the original libsignal
 ```
 

@@ -107,12 +107,12 @@ cd /path/to/libsignal
 npm link
 
 # In your baileys project
-npm link @kelvdra/libsignal
+npm link @akaanakbaik/libsignal
 
 # Or use a direct dependency in package.json
 {
   "dependencies": {
-    "@kelvdra/libsignal": "file:/path/to/libsignal"
+    "@akaanakbaik/libsignal": "file:/path/to/libsignal"
   }
 }
 ```

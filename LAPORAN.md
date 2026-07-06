@@ -8,7 +8,7 @@
 |----------|-|
 | **Tanggal** | 6 Juli 2026 |
 | **Versi** | 6.0.1 |
-| **Repository** | [@kelvdra/libsignal](https://github.com/kelvdra/libsignal) |
+| **Repository** | [@akaanakbaik/libsignal](https://github.com/akaanakbaik/libsignal) |
 | **Fork dari** | [WhiskeySockets/libsignal-node](https://github.com/WhiskeySockets/libsignal-node) v6.0.0 |
 | **Target** | Dependency resmi untuk [@kelvdra/baileys](https://github.com/kelvdra/baileys) |
 | **Lisensi** | GPL-3.0 |
@@ -42,7 +42,7 @@
 
 ### Status: ✅ **PRODUCTION READY**
 
-`@kelvdra/libsignal` v6.0.1 telah melalui audit menyeluruh dan siap digunakan sebagai pengganti `WhiskeySockets/libsignal-node` v6.0.0.
+`@akaanakbaik/libsignal` v6.0.1 telah melalui audit menyeluruh dan siap digunakan sebagai pengganti `WhiskeySockets/libsignal-node` v6.0.0.
 
 ### Key Metrics
 
@@ -109,7 +109,7 @@ libsignal-node/
 └── README.md             # Dokumentasi minimal
 ```
 
-#### Sesudah (Modernized @kelvdra/libsignal)
+#### Sesudah (Modernized @akaanakbaik/libsignal)
 ```
 libsignal/
 ├── index.js              # ✅ Sama (tidak berubah)
@@ -364,9 +364,9 @@ Berikut adalah file-file sementara yang dibersihkan dari repository:
 | Method | Code | Status |
 |--------|------|--------|
 | `require('libsignal')` | Old Baileys | ✅ (via npm alias) |
-| `require('@kelvdra/libsignal')` | New Baileys | ✅ |
+| `require('@akaanakbaik/libsignal')` | New Baileys | ✅ |
 | `import * as libsignal from 'libsignal'` | ESM | ✅ |
-| `import * as libsignal from '@kelvdra/libsignal'` | ESM | ✅ |
+| `import * as libsignal from '@akaanakbaik/libsignal'` | ESM | ✅ |
 
 ### 5.2 API Usage Compatibility
 
@@ -545,7 +545,7 @@ console.error("WARNING: Expected pubkey of length 33...");
 
 | Element | Optimized | Details |
 |---------|-----------|---------|
-| package name | ✅ | @kelvdra/libsignal |
+| package name | ✅ | @akaanakbaik/libsignal |
 | description | ✅ | Includes keywords: Signal Protocol, Node.js, Baileys |
 | keywords | ✅ | signal, whispersystems, crypto, whatsapp, baileys |
 | README title | ✅ | Includes "Signal Protocol" and "Node.js" |
@@ -595,7 +595,7 @@ console.error("WARNING: Expected pubkey of length 33...");
 
 | Field | Status | Value |
 |-------|--------|-------|
-| name | ✅ | `@kelvdra/libsignal` |
+| name | ✅ | `@akaanakbaik/libsignal` |
 | version | ✅ | `6.0.1` |
 | description | ✅ | Modernized fork... |
 | main | ✅ | `index.js` |

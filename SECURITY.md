@@ -39,7 +39,7 @@ Security vulnerabilities must be handled with utmost priority.**
 ### Scope
 
 This policy covers:
-- The `@kelvdra/libsignal` npm package
+- The `@akaanakbaik/libsignal` npm package
 - The source code in this repository
 - Build and release pipelines
 

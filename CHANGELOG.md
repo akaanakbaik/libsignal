@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `curve.js`: Removed public key format warning
   - `queue_job.js`: Removed unhandled bucket type warning
 - **Package**: Updated `package.json`:
-  - Renamed to `@kelvdra/libsignal`
+  - Renamed to `@akaanakbaik/libsignal`
   - Added `files` field to include `index.js`
   - Added `engines.node >= 16.0.0`
   - Added test scripts using Node.js built-in test runner

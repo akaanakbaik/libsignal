@@ -2,7 +2,7 @@
 
 ## Overview
 
-`@kelvdra/libsignal` is a Node.js implementation of the **Signal Protocol** - a cryptographic protocol providing end-to-end encryption with forward secrecy and future secrecy (post-compromise security).
+`@akaanakbaik/libsignal` is a Node.js implementation of the **Signal Protocol** - a cryptographic protocol providing end-to-end encryption with forward secrecy and future secrecy (post-compromise security).
 
 This is a modernized fork of [WhiskeySockets/libsignal-node](https://github.com/WhiskeySockets/libsignal-node), designed specifically as a dependency for [@kelvdra/baileys](https://github.com/kelvdra/baileys).
 

@@ -51,7 +51,7 @@ git push origin main --tags
 npm publish --access public
 
 # 5. Create GitHub Release
-# Go to https://github.com/kelvdra/libsignal/releases
+# Go to https://github.com/akaanakbaik/libsignal/releases
 # Click "Draft a new release"
 # Select the new tag
 # Generate release notes
@@ -71,7 +71,7 @@ npm publish --access public
 ## npm Publishing
 
 ### Requirements
-- npm account with access to `@kelvdra/libsignal`
+- npm account with access to `@akaanakbaik/libsignal`
 - 2FA enabled on npm account
 - `NPM_TOKEN` set in GitHub secrets
 
@@ -94,7 +94,7 @@ The published package includes:
 
 ## Post-Release
 
-1. Verify npm package: `npm view @kelvdra/libsignal`
+1. Verify npm package: `npm view @akaanakbaik/libsignal`
 2. Test in Baileys: Update dependency and run tests
 3. Announce in relevant channels
 4. Monitor for issues
