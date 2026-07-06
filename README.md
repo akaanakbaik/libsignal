@@ -2,10 +2,9 @@
 
 **Modernized, security-hardened fork of the Signal Protocol for Node.js**
 
-[![npm version](https://img.shields.io/npm/v/@kelvdra/libsignal?style=flat-square)](https://www.npmjs.com/package/@kelvdra/libsignal)
-[![npm downloads](https://img.shields.io/npm/dm/@kelvdra/libsignal?style=flat-square)](https://www.npmjs.com/package/@kelvdra/libsignal)
+[![GitHub Release](https://img.shields.io/github/v/release/akaanakbaik/libsignal?style=flat-square)](https://github.com/akaanakbaik/libsignal/releases)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](LICENSE)
-[![Node.js CI](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square)](https://github.com/akaanakbaik/libsignal/actions)
+[![Node.js CI](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square)](https://github.com/akaanakbaik/libsignal/actions?query=workflow%3ACI)
 [![CodeQL](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square&label=CodeQL)](https://github.com/akaanakbaik/libsignal/security/code-scanning)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D16-brightgreen?style=flat-square)](package.json)
 
