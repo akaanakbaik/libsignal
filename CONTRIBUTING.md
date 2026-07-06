@@ -42,11 +42,11 @@ This package implements the **Signal Protocol** - a cryptographic protocol for e
 
 ### 1. Reporting Bugs
 
-Open a [Bug Report](https://github.com/kelvdra/libsignal/issues/new?template=bug_report.md).
+Open a [Bug Report](https://github.com/akaanakbaik/libsignal/issues/new?template=bug_report.md).
 
 ### 2. Suggesting Enhancements
 
-Open a [Feature Request](https://github.com/kelvdra/libsignal/issues/new?template=feature_request.md).
+Open a [Feature Request](https://github.com/akaanakbaik/libsignal/issues/new?template=feature_request.md).
 
 ### 3. Pull Requests
 
@@ -70,7 +70,7 @@ Open a [Feature Request](https://github.com/kelvdra/libsignal/issues/new?templat
 ## Development Setup
 
 ```bash
-git clone https://github.com/kelvdra/libsignal.git
+git clone https://github.com/akaanakbaik/libsignal.git
 cd libsignal
 npm install
 npm test
@@ -96,4 +96,4 @@ See [RELEASE_GUIDE.md](RELEASE_GUIDE.md) for details.
 
 ## Questions?
 
-Open a [Discussion](https://github.com/kelvdra/libsignal/discussions) or check the [Documentation](https://github.com/kelvdra/libsignal#readme).
+Open a [Discussion](https://github.com/akaanakbaik/libsignal/discussions) or check the [Documentation](https://github.com/akaanakbaik/libsignal#readme).

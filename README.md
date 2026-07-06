@@ -5,8 +5,8 @@
 [![npm version](https://img.shields.io/npm/v/@kelvdra/libsignal?style=flat-square)](https://www.npmjs.com/package/@kelvdra/libsignal)
 [![npm downloads](https://img.shields.io/npm/dm/@kelvdra/libsignal?style=flat-square)](https://www.npmjs.com/package/@kelvdra/libsignal)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](LICENSE)
-[![Node.js CI](https://img.shields.io/github/actions/workflow/status/kelvdra/libsignal/ci.yml?branch=main&style=flat-square)](https://github.com/kelvdra/libsignal/actions)
-[![CodeQL](https://img.shields.io/github/actions/workflow/status/kelvdra/libsignal/ci.yml?branch=main&style=flat-square&label=CodeQL)](https://github.com/kelvdra/libsignal/security/code-scanning)
+[![Node.js CI](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square)](https://github.com/akaanakbaik/libsignal/actions)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/akaanakbaik/libsignal/ci.yml?branch=master&style=flat-square&label=CodeQL)](https://github.com/akaanakbaik/libsignal/security/code-scanning)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D16-brightgreen?style=flat-square)](package.json)
 
 ---
@@ -253,7 +253,7 @@ node --test test/benchmark.test.js
 
 ```bash
 # Clone
-git clone https://github.com/kelvdra/libsignal.git
+git clone https://github.com/akaanakbaik/libsignal.git
 cd libsignal
 
 # Install
@@ -327,6 +327,6 @@ Yes. We maintain this package for the `@kelvdra/baileys` project and welcome com
 
 ## Support
 
-- [GitHub Issues](https://github.com/kelvdra/libsignal/issues)
+- [GitHub Issues](https://github.com/akaanakbaik/libsignal/issues)
 - [Security Issues](SECURITY.md)
-- [Documentation](https://github.com/kelvdra/libsignal#readme)
+- [Documentation](https://github.com/akaanakbaik/libsignal#readme)
