@@ -28,7 +28,7 @@
     "protobufjs": "^7.5.5"
   },
   "devDependencies": {
-    "eslint": "^8.57.1"
+    "eslint": "^10.8.1"
   },
   "files": [
     "index.js",
