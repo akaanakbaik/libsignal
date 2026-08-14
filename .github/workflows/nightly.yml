@@ -1,66 +1,51 @@
 name: Nightly
-
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every day at midnight UTC
+    - cron: '0 0 * * *'
   workflow_dispatch:
-
+permissions:
+  contents: read
 jobs:
   audit:
     name: Security Audit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
+          cache: npm
       - run: npm ci --ignore-scripts
       - name: Run npm audit
         run: npm audit --audit-level=moderate
-        continue-on-error: true
       - name: Check outdated dependencies
         run: npm outdated
         continue-on-error: true
-
-  dependency-review:
-    name: Dependency Review
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/dependency-review-action@v4
-        with:
-          allow-licenses: GPL-3.0, MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, Unlicense
-          fail-on-scopes: runtime
-
   benchmark:
     name: Benchmark
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
+          cache: npm
       - run: npm ci --ignore-scripts
       - run: node --test test/benchmark.test.js
-        continue-on-error: true
-
   health:
     name: Package Health
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
       - name: Check package size
-        run: |
-          npm pack --dry-run 2>&1 | tail -5
+        run: npm pack --dry-run
       - name: Verify entry points
         run: |
-          node -e "require('./index.js')" &&
-          node -e "require('./src/crypto.js')" &&
+          node -e "require('./index.js')"
+          node -e "require('./src/crypto.js')"
           echo "All entry points OK"

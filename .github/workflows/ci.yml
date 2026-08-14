@@ -1,32 +1,27 @@
 name: CI
-
 on:
   push:
     branches: [main, master, develop]
   pull_request:
     branches: [main, master]
   workflow_dispatch:
-
+permissions:
+  contents: read
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
-
 jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
+          cache: npm
       - run: npm ci --ignore-scripts
-      - run: npx eslint src/ --ext .js
-        continue-on-error: true
-      - run: npx prettier --check "src/**/*.js" "index.js" "test/**/*.js"
-        continue-on-error: true
-
+      - run: npm run lint
   test:
     name: Test (Node ${{ matrix.node-version }})
     runs-on: ubuntu-latest
@@ -35,44 +30,52 @@ jobs:
         node-version: [16, 18, 20, 22]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: npm
       - run: npm ci --ignore-scripts
-      - run: node --test test/*.test.js
+      - run: npm test
       - name: Run regression tests
         run: node --test test/no-console-log.test.js
-
   security:
     name: Security Audit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
+          cache: npm
       - run: npm ci --ignore-scripts
       - run: npm audit --audit-level=moderate
-        continue-on-error: true
-
   coverage:
     name: Test Coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
+          cache: npm
       - run: npm ci --ignore-scripts
       - run: npm test
       - name: Generate coverage report
-        run: node --experimental-test-coverage --test test/*.test.js 2>&1
-        continue-on-error: true
-
+        run: node --experimental-test-coverage --test test/*.test.js
+  dependency-review:
+    name: Dependency Review
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/dependency-review-action@v5
+        with:
+          fail-on-severity: moderate
+          allow-licenses: GPL-3.0, MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, Unlicense
+          fail-on-scopes: runtime
   codeql:
     name: CodeQL Analysis
     runs-on: ubuntu-latest
@@ -85,8 +88,8 @@ jobs:
       matrix:
         language: [javascript]
     steps:
-      - uses: actions/checkout@v4
-      - uses: github/codeql-action/init@v3
+      - uses: actions/checkout@v7
+      - uses: github/codeql-action/init@v4
         with:
           languages: ${{ matrix.language }}
-      - uses: github/codeql-action/analyze@v3
+      - uses: github/codeql-action/analyze@v4
