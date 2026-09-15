@@ -39,9 +39,9 @@ jobs:
             ci
             style
           requireScope: false
-          subjectPattern: ^[A-Z].+$
+          subjectPattern: ^([A-Z].+|bump .+)$
           subjectPatternError: |
-            The subject "{subject}" must start with an uppercase letter.
+            The subject "{subject}" must start with an uppercase letter (dependabot "bump ..." titles are also accepted).
   compatibility:
     name: Compatibility Check (Node ${{ matrix.node-version }})
     runs-on: ubuntu-latest
