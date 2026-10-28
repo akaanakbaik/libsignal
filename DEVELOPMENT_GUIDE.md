@@ -145,3 +145,12 @@ npx eslint --fix src/
 ```bash
 npx prettier --write "src/**/*.js"
 ```
+
+## Maintenance tooling
+
+Runtime compatibility remains Node.js >=16. Development linting uses ESLint 10
+with `eslint.config.cjs` and requires Node.js 20.19+, 22.13+, or 24+.
+Use Node.js 22 or 24 for development and run `npm ci`, `npm run lint`,
+`npm test`, and `npm audit --audit-level=moderate` before submitting changes.
+The CI runtime matrix installs production dependencies only so older supported
+Node.js versions do not need to run the development lint tooling.
